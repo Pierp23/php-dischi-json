@@ -19,7 +19,7 @@
         <div class="container">
             <div class="row">
                 <div v-for="(disc, i) in disc" :key="i" class="my-col">
-                    <div class="card">
+                    <div @click="albumInfos(i)" class="card">
                         <div class="img">
                             <img :src="disc.img" alt="">
                         </div>
@@ -30,10 +30,24 @@
                             <p>
                                 {{disc.title}}
                             </p>
-
                         </div>
-
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <div @click="albumInfosReset()" v-if="albumInfo !== ''" id="overlay">
+            <div class="card">
+                <div class="img">
+                    <img :src="albumInfo.img" alt="">
+                </div>
+                <div class="info">
+                    <p>
+                        {{albumInfo.artist}}
+                    </p>
+                    <p>
+                        {{albumInfo.title}}
+                    </p>
                 </div>
             </div>
         </div>

@@ -1,3 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+}
+
 .my-col {
     width: calc(100% / 3 - 20px);
     margin: 20px 10px;
@@ -5,13 +17,12 @@
 
 .card {
     width: 400px;
-    height: 100%;
     border-radius: 20px;
 }
 
 .card .img {
     width: 400px;
-    height: 400px;
+    height: 350px;
 }
 
 .card .img img {
@@ -29,4 +40,17 @@
 
 .card p:first-child {
     font-size: 20px;
+}
+
+#overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }

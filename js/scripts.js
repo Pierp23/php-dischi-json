@@ -3,8 +3,8 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            message: 'Hello Vue!',
-            disc: []
+            disc: [],
+            albumInfo: ''
         }
     },
     created() {
@@ -14,5 +14,19 @@ createApp({
             .then(res => {
                 this.disc = res.data;
             });
+    },
+    methods: {
+        albumInfos(i) {
+            axios
+                .get('http://localhost/php-dischi-json/api.php', {
+                })
+                .then(res => {
+                    this.albumInfo = res.data[i];
+                    console.log(this.albumInfo)
+                });
+        },
+        albumInfosReset() {
+            this.albumInfo = ''
+        }
     }
 }).mount('#app');
