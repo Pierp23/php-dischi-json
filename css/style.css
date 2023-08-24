@@ -1,0 +1,32 @@
+.my-col {
+    width: calc(100% / 3 - 20px);
+    margin: 20px 10px;
+}
+
+.card {
+    width: 400px;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.card .img {
+    width: 400px;
+    height: 400px;
+}
+
+.card .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.card p {
+    text-align: center;
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.card p:first-child {
+    font-size: 20px;
+}

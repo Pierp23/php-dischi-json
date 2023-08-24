@@ -3,7 +3,8 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            message: 'Hello Vue!'
+            message: 'Hello Vue!',
+            disc: []
         }
     },
     created() {
@@ -11,7 +12,7 @@ createApp({
             .get('http://localhost/php-dischi-json/api.php', {
             })
             .then(res => {
-                console.log(res.data);
+                this.disc = res.data;
             });
     }
 }).mount('#app');
