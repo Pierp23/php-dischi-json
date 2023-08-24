@@ -1,4 +1,6 @@
 <?php
+// rendo l'API accessibile a tutti
+header("Access-Control-Allow-Origin: *");
 
 $disc = [
     [
@@ -27,3 +29,7 @@ $disc = [
         'img' => 'https://m.media-amazon.com/images/I/71-enGzLjZL._UF1000,1000_QL80_.jpg'
     ]
 ];
+
+// rendo l'array associativo un file json e lo stampo
+header('Content-Type: application/json');
+echo json_encode($disc);
